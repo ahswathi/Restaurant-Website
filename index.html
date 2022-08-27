@@ -1,266 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.bundle.js" async></script>
-    <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>thirdeyeinfo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .nav-item {
+            margin-right: 80px;
+        }
+        .nav-link:hover{
+            color: gray;
+        }
+    </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm bg-dark sticky-top">
-    <div class="container-fluid"> 
-        <a href="#" class="navbar-brand dance-font">South <span class="text-warning">Thindies</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#restuarant-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="restuarant-menu">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item px-3">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item px-3">
-                <a href="#specials" class="nav-link">Special</a>
-            </li>
-            <li class="nav-item px-3">
-                <a href="#chefs" class="nav-link">Chef</a>
-            </li><li class="nav-item px-3">
-                <a href="#menus" class="nav-link">Menus</a>
-            </li><li class="nav-item px-3">
-                <a href="#contact" class="nav-link">Contact</a>
-            </li>
-            </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="thirdeye-white-logo4.png" alt="" width="280" height="50">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mb-2 mb-lg-0 fw-bolder ">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"  href="#">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                                    <li><a class="dropdown-item" href="#">Services</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item " href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <button class="btn btn-outline-danger" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
-</nav>
-      
-<!--slider---->
-         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="media/img/slider-1.jpg" class="d-block w-100" alt="..." >
-              </div>
-              <div class="carousel-item">
-                <img src="media/img/slider-2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="media/img/slider-3.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
 
-    <!-----Specials-->
-        <div class="specials p-5 " id="specials">
-         <div class="container">
-            <div class="grid">
-                <div class="row mt-5">
-                    <div class="col-md-4 text-center">
-                         <i class="fa-solid fa-hand-holding-droplet text-success  fa-4x"></i>
-                         <p class="h2 dance-font my-2">Handpicked Items</p>
-                         <p class="lead fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex ipsum facere quod quibusdam sequi id, amet veritatis eum aut quas, quae molestias nostrum iusto cum architecto maiores atque fugiat?</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fa-solid fa-heart text-danger  fa-4x"></i>
-                        <p class="h2 dance-font my-2">Handpicked Items</p>
-                        <p class="lead fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex ipsum facere quod quibusdam sequi id, amet veritatis eum aut quas, quae molestias nostrum iusto cum architecto maiores atque fugiat?</p>
-                   </div>
-                   <div class="col-md-4 text-center">
-                    <i class="fa-solid fa-hand-point-up text-warning  fa-4x"></i>
-                    <p class="h2 dance-font my-2">Handpicked Items</p>
-                    <p class="lead fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex ipsum facere quod quibusdam sequi id, amet veritatis eum aut quas, quae molestias nostrum iusto cum architecto maiores atque fugiat?</p>
-               </div>
-             </div>
-            </div>
-          </div>
-        </div>
-
-        <!-----Menus------->
-      <section class="menus">
-        <div class="menu-1 bg-dark p-5" id="menus">
-          <div class="container">
-           <div class="grid">
-            <div class="row text-white align-items-center mt-5">
-              <div class="col-md-6">
-              <p class="h2 dance-font">Avacado <span class="text-warning">Mixup</span></p>
-              <p class="lead fst-italic ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, quos amet ratione vel doloribus perferendis rem placeat deserunt incidunt odio adipisci, nemo cumque! Placeat labore suscipit corporis ducimus, earum architecto.</p>
-              </div>
-              <div class="col-md-6">
-                <video controls autoplay class="img-fluid">
-                  <source src="media/vedio/food-1.mp4" type="video/mp4">
-                </video>
-              </div>
-             </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        
-      <section class="menus">
-        <div class="menu-2 bg-white p-5" id="menus">
-          <div class="container">
-           <div class="grid">
-            <div class="row align-items-center mt-5">
-              <div class="col-md-6">
-                <video controls autoplay class="img-fluid">
-                  <source src="media/vedio/food-1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="col-md-6">
-              <p class="h2 dance-font">Love With <span class="text-warning">Food</span></p>
-              <p class="lead fst-italic ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, quos amet ratione vel doloribus perferendis rem placeat deserunt incidunt odio adipisci, nemo cumque! Placeat labore suscipit corporis ducimus, earum architecto.</p>
-              </div>
-             </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="menus">
-        <div class="menu-3 bg-dark p-5" id="menus">
-          <div class="container">
-           <div class="grid">
-            <div class="row text-white align-items-center mt-5">
-              <div class="col-md-6">
-              <p class="h2 dance-font">Chiken Fried <span class="text-warning">Melody</span></p>
-              <p class="lead fst-italic ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, quos amet ratione vel doloribus perferendis rem placeat deserunt incidunt odio adipisci, nemo cumque! Placeat labore suscipit corporis ducimus, earum architecto.</p>
-              </div>
-              <div class="col-md-6">
-                <video controls autoplay class="img-fluid">
-                  <source src="media/vedio/food-1.mp4" type="video/mp4">
-                </video>
-              </div>
-             </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section class="chefs  p-5" id="chefs">
-      <div class="container">
-        <div class="grid">
-          <div class="row mt-5">
-            <div class="col-md-3">
-              <div class="card shadow-lg">
-                <img src="media/img/chefs-1.jpg" alt="" class="img-fluid"/>
-                <div class="card-body">
-                  <p class="h4 card-title fw-bold">Michale Nivan</p>
-                  <p class="dance-font text-muted">Main Chef</p>
-                  <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores neque voluptate.</p>
-                  <div class="d-flex justify-content-around">
-                    <i class="fa-brands fa-facebook text-primary fa-2x"></i>
-                    <i class="fa-brands fa-twitter text-info fa-2x"></i>
-                    <i class="fa-brands fa-youtube text-danger fa-2x"></i>
-                    <i class="fa-brands fa-instagram text-warning fa-2x"></i>
-                  </div>
-                </div>
-              </div>
-           </div>
-           <div class="col-3">
-            <div class="card shadow-lg">
-              <img src="media/img/chefs-1.jpg" alt="" class="img-fluid"/>
-              <div class="card-body">
-                <p class="h4 card-title fw-bold">Michale Nivan</p>
-                <p class="dance-font text-muted">Main Chef</p>
-                <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores neque voluptate.</p>
-                <div class="d-flex justify-content-around">
-                  <i class="fa-brands fa-facebook text-primary fa-2x"></i>
-                  <i class="fa-brands fa-twitter text-info fa-2x"></i>
-                  <i class="fa-brands fa-youtube text-danger fa-2x"></i>
-                  <i class="fa-brands fa-instagram text-warning fa-2x"></i>
-                </div>
-              </div>
-            </div>
-         </div>
-         <div class="col-3">
-          <div class="card shadow-lg">
-            <img src="media/img/chefs-1.jpg" alt="" class="img-fluid"/>
-            <div class="card-body">
-              <p class="h4 card-title fw-bold">Michale Nivan</p>
-              <p class="dance-font text-muted">Main Chef</p>
-              <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores neque voluptate.</p>
-              <div class="d-flex justify-content-around">
-                <i class="fa-brands fa-facebook text-primary fa-2x"></i>
-                <i class="fa-brands fa-twitter text-info fa-2x"></i>
-                <i class="fa-brands fa-youtube text-danger fa-2x"></i>
-                <i class="fa-brands fa-instagram text-warning fa-2x"></i>
-              </div>
-            </div>
-          </div>
-       </div>
-       <div class="col-3">
-        <div class="card shadow-lg">
-          <img src="media/img/chefs-1.jpg" alt="" class="img-fluid"/>
-          <div class="card-body">
-            <p class="h4 card-title fw-bold">Michale Nivan</p>
-            <p class="dance-font text-muted">Main Chef</p>
-            <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores neque voluptate.</p>
-            <div class="d-flex justify-content-around">
-              <i class="fa-brands fa-facebook text-primary fa-2x"></i>
-              <i class="fa-brands fa-twitter text-info fa-2x"></i>
-              <i class="fa-brands fa-youtube text-danger fa-2x"></i>
-              <i class="fa-brands fa-instagram text-warning fa-2x"></i>
-            </div>
-          </div>
-        </div>
-     </div>
-     </div>
-      </div> 
-      </div>
-      </section>
-
-      <footer class="footer bg-dark text-white p-5" id="contact">
-      <div class="container">
-        <div class="grid">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <p>Copyright @2022</p>
-              <small class="dance-font">
-                South Thindies</br>
-                Southend Circle, Bangalore,</br>
-                India 560004 
-                </small>
-            </div>
-            <div class="col-md-4 offset-4">
-              <form>
-                <div class="mb-2">
-                  <input type="text" class="form-control" placeholder="Your Name">
-                </div>
-                <div class="mb-2">
-                  <input type="email" class="form-control" placeholder="Your email">
-                </div>
-                <div class="mb-2">
-                  <input type="number" class="form-control" placeholder="Your Phone number">
-                </div>
-                <div class="mb-2">
-                  <textarea rows="3" class="form-control" placeholder="Your text"></textarea>
-                </div>
-                <div class="mb-2">
-                  <input type="submit" class="btn btn-warning" value="submit">
-                </div>
-                </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      </footer>
-     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
