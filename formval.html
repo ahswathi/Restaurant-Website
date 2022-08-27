@@ -1,0 +1,212 @@
+!
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        .mb-2 span {
+            position: absolute;
+            top: 74px;
+            right: 229px;
+            font-size: 12px;
+            color: red;
+        }
+
+        #submit-error {
+            font-size: 12px;
+            color: red;
+        }
+
+        .mb-2 span i {
+            color: rgb(2, 133, 2);
+
+        }
+        form button{
+    background: #141a34;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-8 mt-2 offset-md-3 align-items-center">
+                <form>
+                    <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="text" class="form-control" id="contact-name" onkeyup="validateName()"
+                            aria-describedby="emailHelp">
+                        <span id="name-error"></span>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="contact-phone" onkeyup="validatePhone()">
+                        <span id="phone-error"></span>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="contact-email" onkeyup="validateEmail()">
+                        <span id="email-error"></span>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="contact-password" onkeyup="validatePassword()">
+                        <span id="password-error"></span>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="newpassword" class="form-control" id="contact-newpassword"
+                            onkeyup="validateNewPassword()">
+                        <span id="newpassword-error"></span>
+                    </div>
+                    <div class="mb-2 form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="contact-message"
+                            onkeyup="validateMessage()"></textarea>
+                        <label for="floatingTextarea">Comments</label>
+                        <span id="message-error"></span>
+
+                    </div>
+                    <button onclick="return validationForm()">Submit</button>
+                    <span id="submit-error"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        var nameError = document.getElementById("name-error");
+        var phoneError = document.getElementById("phone-error");
+        var emailError = document.getElementById("email-error");
+        var passwordError = document.getElementById("password-error");
+        var newpasswordError = document.getElementById("newpassword-error");
+        var messageError = document.getElementById("message-error");
+        var submitError = document.getElementById("submit-error");
+
+        /* this function will trigger whenever we type anything from input feild */
+        function validateName() {
+            var name = document.getElementById("contact-name").value;        /* pick value from input feild and stores in name */
+
+            if (name.length == 0) {
+                nameError.innerHTML = "Name is required";
+                return false;
+            }
+            if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+                nameError.innerHTML = "Write Full Name";
+                return false;
+            }
+            nameError.innerHTML = '<i class="fa-solid fa-check"></i>';
+            return true
+
+        }
+        function validatePhone() {
+            var phone = document.getElementById("contact-phone").value;
+
+            if (phone.length == 0) {
+                phoneError.innerHTML = "Phone number is required"
+                return false;
+            }
+            if (phone.length !== 10) {
+                phoneError.innerHTML = "Phone number should be 10"
+                return false;
+            }
+            if (!phone.match(/^[0-9]{10}$/)) {
+                phoneError.innerHTML = "enter only digits";
+                return false;
+            }
+            phoneError.innerHTML = '<i class="fa-solid fa-check"></i>';
+            return true;
+        }
+        function validateEmail() {
+            var email = document.getElementById("contact-email").value;
+
+            if (email.length == 0) {
+                emailError.innerHTML = "Email is required"
+                return false;
+            }
+            if (!email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)) {
+                emailError.innerHTML = "email invalid";
+                return false;
+            }
+            emailError.innerHTML = '<i class="fa-solid fa-check"></i>';
+            return true;
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("contact-password").value;
+
+            if (password.length == 0) {
+                passwordError.innerHTML = "Password is required"
+                return false;
+            }
+            if (password.length !== 5) {
+                passwordError.innerHTML = "password should be 10"
+                return false;
+            }
+
+            passwordError.innerHTML = '<i class="fa-solid fa-check"></i>';
+            return true;
+        }
+        function validateNewPassword() {
+            var password = document.getElementById("contact-password").value;
+            var newpassword = document.getElementById("contact-newpassword").value;
+
+            if (newpassword.length == 0) {
+                newpasswordError.innerHTML = "newpassword is required"
+                return false;
+            }
+            if (password !== newpassword) {
+                newpasswordError.innerHTML = "password incorrect"
+                return false;
+            }
+
+            newpasswordError.innerHTML = '<i class="fa-solid fa-check"></i>';
+            return true;
+        }
+
+        function validateMessage() {
+            var message = document.getElementById("contact-message").value;
+            var required = 10;
+            var left = required - message.length;
+
+            if (left > 0) {
+                messageError.innerHTML = left + 'more charecter required';
+                return false;
+            }
+            messageError.innerHTML = '<i class="fa-solid fa-check"></i>';
+            return true;
+        }
+
+        function validationForm() {
+            if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage() || !validatePassword()) {
+                submitError.style.display = 'block';
+                submitError.innerHTML = "please fix it to submit";
+                setTimeout(function () {
+                    submitError.style.display = 'none';
+                }, 3000)
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
